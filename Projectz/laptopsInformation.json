@@ -1,0 +1,12 @@
+{
+  "Mix": {
+    "laptops":[{"name":"Dell XPS 13","ram":"16GB", "storage":"512GB","camera":"720p","price":"5000AED"},
+      {"name":"MSI GT76","ram":"16GB", "storage":"512GB","camera":"720p","price":"5500AED"},
+      {"name":"MacBook Pro","ram":"16GB", "storage":"512GB","camera":"720p","price":"7000AED"},
+      {"name":"Razer Blade 15","ram":"8GB", "storage":"512GB","camera":"720p","price":"5800AED"}]
+  },
+  "Acer":{
+    "laptops":[{"name":"Acer Nitro 7","ram":"16GB", "storage":"1TB","camera":"1080p","price":"6500AED"},
+      {"name":"Acer Swift 3","ram":"8GB", "storage":"256GB","camera":"480p","price":"4000AED"}]
+  }
+}

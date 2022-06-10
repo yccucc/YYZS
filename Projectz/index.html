@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Yzs Website</title>
+</head>
+
+<body>
+  <table align="center">
+    <tr>
+      <td>
+        <h1>Yzs Website</h1>
+      </td>
+
+      <hr color="#5085A5" size="3">
+
+      <table align="center">
+        <tr>
+          <th>
+            <h2><a href="Home.html">Home</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="Phones.html">Phones</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="Laptops.html">Laptops</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="index.html">Order</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="AboutDevelopers.html">About Developers</a></h2>
+          </th>
+        </tr>
+      </table>
+      <hr color="#5085A5" size="3">
+      <br>
+
+  <script>
+  document.write("<table>");
+  document.write("<tr>")
+    var x = ["iPhone 13","iPhone 13 Pro Max","Galaxy Note 20 Ultra", "Galaxy S22","Google Pixel 5a", "Google Pixel 6"];
+    document.write("<div>The availabe phones in our website are: " + x[0] + ", " +
+       x[1] + ", " + x[2] + ", " + x[3] + ", " + x[4] + ", " + x[5] +"</div>");
+       document.write("</tr>")
+       document.write("<tr>")
+       document.write("<br>");
+    var y = ["Dell XPS 13","MSI GT76","MacBook Pro", "Razer Blade 15","Acer Nitro 7", "Acer Swift 3"];
+    document.write("<div> And the availabe laptops in our website are: " + y[0] + ", " +
+       y[1] + ", " + y[2] + ", " + y[3] + ", " + y[4] + ", " + y[5] + "</div>");
+   document.write("</tr>")
+  document.write("</table>");
+  document.write("<hr>");
+  document.write("<table>");
+    document.write("<tr>")
+    document.write("Note: Our website provides a discount code of 20% on everything, The code is (YZS).<br>"
+    + "To check if the code is working, write the code below on the text field");
+      document.write("</tr>")
+    document.write("</table>");
+
+
+    function discountcode(code) {
+      var xhttp;
+      if (code != "YZS") {
+        document.getElementById("showCode").innerHTML = "The discount code is not working";
+      }
+      else{
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("showCode").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "Offercode.txt", true);
+      xhttp.send();
+    }
+  }
+</script>
+
+<div><input type = "text" id = "txt" onkeyup = "discountcode(this.value)">
+  <span id = "showCode" style = "color:red"></span></div>
+
+<br><hr><br>
+  <form method = "post" action = "/Addord">
+    <label>Enter your name: </label>
+    <input type = "text" name = "cuname" required><br>
+    <label>Enter your mobile number: </label>
+      <input type = "text" name = "cunumber" required><br>
+    <label>Enter the product name: </label>
+    <input type = "text" name = "prname" required><br>
+      <input type = "submit" value = "Order">
+    </form>
+
+    <footer align="center">
+      <hr>
+      <div>Copyright &copy; Yzs Website 2022</div>
+      <div>Contact Us on our Email Address: <a href="mailto:Yzs@gmail.com">Yzs@gmail.com</a></div>
+      <div>Our Mobile Number : +1682777555</div>
+    </footer>
+</body>
+
+</html>

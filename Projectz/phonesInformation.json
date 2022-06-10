@@ -1,0 +1,20 @@
+{
+  "Apple": {
+    "phones":[{"name":"iPhone 13","ram":"8GB", "capacity":"256GB",
+       "camera":"12MP","price":"4000AED"},
+      {"name":"iPhone 13 Pro Max","ram":"8GB", "capacity":"512GB",
+         "camera":"12MP","price":"5000AED"}]
+  },
+  "Samsung":{
+    "phones":[{"name":"Galaxy Note 20 Ultra","ram":"8GB", "capacity":"512GB",
+       "camera":"108MP","price":"4600AED"},
+      {"name":"Galaxy S22","ram":"8GB", "capacity":"256GB",
+         "camera":"50MP","price":"3500AED"}]
+  },
+  "Google":{
+    "phones":[{"name":"Google Pixel 5a","ram":"6GB", "capacity":"128GB",
+       "camera":"12MP","price":"2000AED"},
+      {"name":"Google Pixel 6","ram":"8GB", "capacity":"256GB",
+         "camera":"50MP","price":"2700AED"}]
+}
+}

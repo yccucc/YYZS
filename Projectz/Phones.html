@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Yzs Website</title>
+</head>
+
+<body>
+  <table align="center">
+    <tr>
+      <td>
+        <h1>Yzs Website</h1>
+      </td>
+
+      <hr color="#5085A5" size="3">
+
+      <table align="center">
+        <tr>
+          <th>
+            <h2><a href="Home.html">Home</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="Phones.html">Phones</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="Laptops.html">Laptops</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="index.html">Order</a></h2>
+          </th>
+          <th>|</th>
+          <th>
+            <h2><a href="AboutDevelopers.html">About Developers</a></h2>
+          </th>
+        </tr>
+      </table>
+      <hr color="#5085A5" size="3">
+      <br>
+
+  <script>
+  document.write("<table>");
+  document.write("<tr>")
+    var x = ["iPhone 13","iPhone 13 Pro Max","Galaxy Note 20 Ultra", "Galaxy S22","Google Pixel 5a", "Google Pixel 6"];
+    document.write("<div>The availabe phones in our website are: " + x[0] + " , " +
+       x[1] + " , " + x[2] + " , " + x[3] + " , " + x[4] + " , " + x[5] +"</div>");
+   document.write("</tr>")
+  document.write("</table>");
+  document.write("<hr>");
+
+  function load1() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myJSON = JSON.parse(this.responseText);
+        if("p1"){
+          document.getElementById("result").innerHTML = "The device: " + myJSON.Apple.phones[0].name + "<br>RAM: " + myJSON.Apple.phones[0].ram +
+          "<br>Capacity: " + myJSON.Apple.phones[0].capacity + "<br>Camera: " + myJSON.Apple.phones[0].camera + "<br>Price: " + myJSON.Apple.phones[0].price;
+      }
+    }
+    };
+    xhttp.open("GET", "phonesInformation.json", true);
+    xhttp.send();
+  }
+
+  function load2() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myJSON = JSON.parse(this.responseText);
+        if("p2"){
+          document.getElementById("result").innerHTML = "The device: " + myJSON.Apple.phones[1].name + "<br>RAM: " + myJSON.Apple.phones[1].ram +
+          "<br>Capacity: " + myJSON.Apple.phones[1].capacity + "<br>Camera: " + myJSON.Apple.phones[1].camera + "<br>Price: " + myJSON.Apple.phones[1].price;
+      }
+    }
+    };
+    xhttp.open("GET", "phonesInformation.json", true);
+    xhttp.send();
+  }
+
+  function load3() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myJSON = JSON.parse(this.responseText);
+        if("p3"){
+          document.getElementById("result").innerHTML = "The device: " + myJSON.Samsung.phones[0].name + "<br>RAM: " + myJSON.Apple.phones[0].ram +
+          "<br>Capacity: " + myJSON.Apple.phones[0].capacity + "<br>Camera: " + myJSON.Apple.phones[0].camera + "<br>Price: " + myJSON.Apple.phones[0].price;
+      }
+    }
+    };
+    xhttp.open("GET", "phonesInformation.json", true);
+    xhttp.send();
+  }
+
+  function load4() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myJSON = JSON.parse(this.responseText);
+        if("p4"){
+          document.getElementById("result").innerHTML = "The device: " + myJSON.Samsung.phones[1].name + "<br>RAM: " + myJSON.Samsung.phones[1].ram +
+          "<br>Capacity: " + myJSON.Samsung.phones[1].capacity + "<br>Camera: " + myJSON.Samsung.phones[1].camera + "<br>Price: " + myJSON.Samsung.phones[1].price;
+      }
+    }
+    };
+    xhttp.open("GET", "phonesInformation.json", true);
+    xhttp.send();
+  }
+
+  function load5() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myJSON = JSON.parse(this.responseText);
+        if("p5"){
+          document.getElementById("result").innerHTML = "The device: " + myJSON.Google.phones[0].name + "<br>RAM: " + myJSON.Google.phones[0].ram +
+          "<br>Capacity: " + myJSON.Google.phones[0].capacity + "<br>Camera: " + myJSON.Google.phones[0].camera + "<br>Price: " + myJSON.Google.phones[0].price;
+      }
+    }
+    };
+    xhttp.open("GET", "phonesInformation.json", true);
+    xhttp.send();
+  }
+
+  function load6() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myJSON = JSON.parse(this.responseText);
+        if("p6"){
+          document.getElementById("result").innerHTML = "The device: " + myJSON.Google.phones[1].name + "<br>RAM: " + myJSON.Google.phones[1].ram +
+          "<br>Capacity: " + myJSON.Google.phones[1].capacity + "<br>Camera: " + myJSON.Google.phones[1].camera + "<br>Price: " + myJSON.Google.phones[1].price;
+      }
+    }
+    };
+    xhttp.open("GET", "phonesInformation.json", true);
+    xhttp.send();
+  }
+</script>
+<table>
+  <tr>
+<p>Click on the picture to see the information about the device</p>
+</tr>
+<tr>
+  <th><input type = "image" src = "Images/iphone_13_.png" width = "160" id = "p1" onclick = "load1()"></th>
+  <th><input type = "image" src = "Images/iphone_13promax.png" width = "140" id = "p2" onclick = "load2()"></th>
+  <th><input type = "image" src = "Images/note20ultra.png" width = "150" id = "p3" onclick = "load3()"></th>
+  <th><input type = "image" src = "Images/s22ultra.png" width = "150" id = "p4" onclick = "load4()"></th>
+  <th><input type = "image" src = "Images/pixel5a.png" width = "188" id = "p5" onclick = "load5()"></th>
+  <th><input type = "image" src = "Images/pixel6.png" width = "205" id = "p6" onclick = "load6()"></th>
+</tr>
+  <tr>
+    <td colspan = "6"><span id = "result"><br><br><br><br><br><br></td>
+  </tr>
+</table>
+
+<footer align="center">
+  <hr>
+  <div>Copyright &copy; Yzs Website 2022</div>
+  <div>Contact Us on our Email Address: <a href="mailto:Yzs@gmail.com">Yzs@gmail.com</a></div>
+  <div>Our Mobile Number : +1682777555</div>
+</footer>
+</body>
+
+</html>
